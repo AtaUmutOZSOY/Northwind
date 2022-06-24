@@ -1,23 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand " href="#">Northwind</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#" style="color:white">NORTHWIND</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav" >
-        <li class="nav-item" *ngFor="let content of contents">
-          <a class="nav-link active" href="#">{{content.contentName}}</a>
-          
-        </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ng-container>
+            <li class="nav-item" *ngFor="let content of contents; let i=index">
+            <a  class="nav-link active" aria-current="page" href="{{content.contentName}}" style="color:white">{{content.contentName}}</a>
+            </li>
+          </ng-container>
+
       </ul>
+      <a class="a-n1" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Log In
+      </a> 
+      <a class="a-n2" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Register
+      </a> 
+      
     </div>
-    
-      <form class="d-flex" >
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    
   </div>
 </nav>
-

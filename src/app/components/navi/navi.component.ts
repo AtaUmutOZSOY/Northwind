@@ -13,9 +13,13 @@ export class NaviComponent implements OnInit {
   dataLoaded:boolean=false
   constructor(private contentService:ContentService) { }
 
+  navMenus =  this.getContents();
+
+
   ngOnInit(): void {
-    this.getContents();
+  
   }
+
 
   getContents(){
     this.contentService.getContents().subscribe(response => {
